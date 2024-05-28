@@ -1,0 +1,19 @@
+{
+  "name": "mesh-bug",
+  "version": "1.0.0",
+  "scripts": {
+    "v1": "tsx race1.ts",
+    "v2": "tsx race2.ts",
+    "codegen:subgraph": "graphclient build"
+  },
+  "dependencies": {
+    "@graphprotocol/client-cli": "^3.0.0",
+    "@graphql-mesh/runtime": "0.99.7"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tsx": "^4.11.0"
+  }
+}

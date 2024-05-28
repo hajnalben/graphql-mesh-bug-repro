@@ -1,0 +1,3 @@
+{
+  "8603d7faf0a4d9f4a51319350b2284f66b392433e833d07b38158889c5f42369": "query GetUserSubs($id: String!, $first: Int, $skip: Int, $orderBy: ChannelMember_orderBy, $orderDirection: OrderDirection) {\n  channelMembers(\n    first: $first\n    skip: $skip\n    orderBy: $orderBy\n    orderDirection: $orderDirection\n    where: {subscriber: $id, isSubscribed: true}\n  ) {\n    id\n    isSubscribed\n    isStaked\n    currentStaked\n    totalClaimed\n    lastUpdatedTimestamp\n    lastClaimedTimestamp\n    totalSubscriptionOutflowRate\n    totalSubscriptionOutflowAmount\n    status\n    subscriber {\n      id\n    }\n    channel {\n      id\n    }\n  }\n}"
+}

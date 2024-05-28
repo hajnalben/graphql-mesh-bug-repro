@@ -1,0 +1,26 @@
+query GetUserSubs($id: String!, $first: Int, $skip: Int, $orderBy: ChannelMember_orderBy, $orderDirection: OrderDirection) {
+  channelMembers(
+    first: $first
+    skip: $skip
+    orderBy: $orderBy
+    orderDirection: $orderDirection
+    where: { subscriber: $id, isSubscribed: true }
+  ) {
+    id
+    isSubscribed
+    isStaked
+    currentStaked
+    totalClaimed
+    lastUpdatedTimestamp
+    lastClaimedTimestamp
+    totalSubscriptionOutflowRate
+    totalSubscriptionOutflowAmount
+    status
+    subscriber {
+      id
+    }
+    channel {
+      id
+    }
+  }
+}
